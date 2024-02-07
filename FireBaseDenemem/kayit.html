@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>Kayıt Formu</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            width: 100vw;
+        }
+
+        container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;" class="text text-success">Kayıt Formu
+    </h2>
+    <div class="container">
+        <div class="col-sm-12" style="border: 1px solid gray; border-radius: 8px;">
+            <h2>Bilgileri Doldurunuz</h2>
+            <form action="#" style="padding: 20px;">
+                <div class="form-group">
+                    <label for="name" class="form-label">isim:</label>
+                    <input type="text" class="form-control" id="name" placeholder="İsminiz Girin" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email Girişi" name="email">
+                </div>
+                <div class="form-group" class="form-label">
+                    <label for="pwd">sifre:</label>
+                    <input type="password" class="form-control" id="psw" placeholder="Şifre Girişi" name="pwd">
+                </div>
+
+                <button type="button" onclick="createData()" id="save_btn" class="btn btn-info">Gönder</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="./kayit.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {
+            width: 100vw;
+        }
+
+        container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body style="box-sizing: border-box;">
+    <div class="container text-center" style="margin-top: 50px; ">
+        <div class="row">
+            <div class="col">
+                <label for="exampleInputEmail1" class="form-label">Email Adresi</label>
+                <input type="email" name="email" id="email" class="form-control">
+                <label for="exampleInputEmail1" class="form-label">Şifre</label>
+                <input type="password" name="password" id="password" class="form-control">
+                <div style="margin-top: 20px;">
+                    <input type="submit" value="Login" name="login" id="login" onclick="login()" class="btn btn-success"
+                        style="padding: 12px;">
+                    <input type="submit" value="signOut" name="Çıkış Yap" id="signOut" onclick="signOut()"
+                        class="btn btn-danger" style="padding: 12px;">
+                    <br>
+                    <input type="submit" value="verileri-getir" name="refresh" id="refresh" onclick="refresh()"
+                        class="btn btn-primary" style="padding: 12px;margin-top:5px;">
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="col">
+                    <h2 style="text-align: center;">Kayıtlar</h2>
+                    <div class="row ekle">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #ffdc5c;padding: 10px;">Name</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #38b7ff;padding: 10px;">Email</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #ff914d;padding: 10px;">Password</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="showUsers">
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <script src="./admin-giris.js"></script>
+
+</body>
+
+</html>
