@@ -24,7 +24,8 @@ function login() {
             // Signed in
             var user = userCredential.user;
             // ...
-        }, alert("Giriş Yapıldı. Verileri Geti Butonuna Basınız"))
+            alert("Giriş Yapıldı. Verileri Geti Butonuna Basınız");
+        })
         .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -41,7 +42,7 @@ function refresh() {
 // Read data
 firebase
     .database()
-    .ref("users1/")
+    .ref("users4/")
     .on("value", function (snapshot) {
         document.getElementById("showUsers").innerHTML = "";
         snapshot.forEach(function (childSnapshot) {
@@ -50,13 +51,32 @@ firebase
             let addDiv = document.createElement("tr");
             addDiv.className = "ekle";
             addDiv.innerHTML =
-                '  <td class="col-sm-4" style="padding: 10px;    word-break: break-word;">' +
+                '  <td class="col-sm-2"     word-break: break-word;">' +
                 childData.name +
-                '</td><td class="col-sm-4" style="padding: 10px;    word-break: break-word;">' +
+                '  <td class="col-sm-1"     word-break: break-word;">' +
                 childData.email +
-                '</td><td class="col-sm-4" style="padding: 10px;">' +
-                childData.psw +
-                "</td> ";
+                '  <td class="col-sm-1"     word-break: break-word;">' +
+                childData.telno +
+                '  <td class="col-sm-1"     word-break: break-word;">' +
+                childData.unvan +
+                '  <td class="col-sm-1"     word-break: break-word;">' +
+                childData.merkezad +
+                '  <td class="col-sm-2"     word-break: break-word;">' +
+                childData.merkezozet +
+                '  <td class="col-sm-2"     word-break: break-word;">' +
+                childData.adres +
+                '  <td class="col-sm"     word-break: break-word;">' +
+                childData.gun1 +
+                '  <td class="col-sm"     word-break: break-word;">' +
+                childData.gun2 +
+                '  <td class="col-sm"     word-break: break-word;">' +
+                childData.yemekkatilimEvet +
+                '  <td class="col-sm"     word-break: break-word;">' +
+                childData.yemekkatilimHayir +
+                '  <td class="col-sm-2"     word-break: break-word;">' +
+                childData.diyet +
+                '  <td class="col-sm-2"     word-break: break-word;">' +
+                childData.alerji;
             document.getElementById("showUsers").appendChild(addDiv);
         });
     });

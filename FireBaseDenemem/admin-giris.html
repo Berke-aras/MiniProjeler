@@ -16,8 +16,15 @@
             width: 100vw;
         }
 
-        container {
-            width: 100%;
+        .container {
+            width: 96%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .r1 {
+            width: 40%;
+            margin: auto;
         }
     </style>
 </head>
@@ -25,7 +32,7 @@
 <body style="box-sizing: border-box;">
     <div class="container text-center" style="margin-top: 50px; ">
         <div class="row">
-            <div class="col">
+            <div class="col r1">
                 <label for="exampleInputEmail1" class="form-label">Email Adresi</label>
                 <input type="email" name="email" id="email" class="form-control">
                 <label for="exampleInputEmail1" class="form-label">Şifre</label>
@@ -42,7 +49,7 @@
             </div>
 
 
-            <div class="col">
+            <div class="col" id="hide">
                 <div class="col">
                     <h2 style="text-align: center;">Kayıtlar</h2>
                     <div class="row ekle">
@@ -51,13 +58,48 @@
                                 <tr>
 
                                     <th scope="col">
-                                        <div class="col" style="background-color: #ffdc5c;padding: 10px;">Name</div>
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">isim</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="col" style="background-color: #38b7ff;padding: 10px;">Email</div>
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Email</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="col" style="background-color: #ff914d;padding: 10px;">Password</div>
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">TelNo</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Ünvan</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Merkez Adı
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Merkez Özet
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Adres
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">1.gün</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">2.gün</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Yemek
+                                            Evet</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Yemek
+                                            Hayır</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Diyet</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="col" style="background-color: #e7e7e7;padding: 10px;">Alerji</div>
                                     </th>
                                 </tr>
                             </thead>

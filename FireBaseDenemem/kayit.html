@@ -2,26 +2,35 @@
 <html lang="tr">
 
 <head>
-    <title>Kayıt Formu</title>
+    <title>HARÜM Kayıt Formu</title>
+    <link rel="stylesheet" href="https://unpkg.com/nice-forms.css@0.1.7/dist/nice-forms.css" />
+    <link rel="stylesheet" href="./kayit.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <style>
+        h2 {
+            text-align: center;
+        }
 
-    <style>
         body {
-            width: 100vw;
+            width: 30%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
         }
 
-        container {
-            width: 100%;
+
+
+        button {
+
+            max-width: 100%;
         }
-    </style>
+    </style> -->
+
 </head>
 
 <body>
-    <h2 style="text-align: center;" class="text text-success">Kayıt Formu
-    </h2>
+    <!-- <h1 style="text-align: center;" class="text text-success">Kayıt Formu
+    </h1>
     <div class="container">
         <div class="col-sm-12" style="border: 1px solid gray; border-radius: 8px;">
             <h2>Bilgileri Doldurunuz</h2>
@@ -44,11 +53,64 @@
             </form>
         </div>
 
+    </div> -->
+
+    <div class="contact-us">
+        <form>
+            <input placeholder="İsim Soyisim" id="name" required="" type="text" required />
+            <input name="E-mail Adresiniz" id="email" placeholder="Email" type="email" required />
+            <input name="Telefon Numaranız" id="telno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Telefon Numaranız" type="tel" required />
+            <input placeholder="Merkez Tam Adı" id="merkezad" required="" type="text" required />
+            <input placeholder=" Merkez çalışmalarınız Kısaca" id="merkezozet" required="" type="text" required />
+            <input placeholder="Ünvan" id="unvan" required="" type="text" required />
+            <input placeholder="Adresiniz" required="" type="text" required id="adres" />
+
+            <div class="checkbox-wrapper-24">
+                <input type="checkbox" id="gun1" name="gun1" value="1.gun" class="gun1" />
+                <label for="gun1">
+                    <span><!-- This span is needed to create the "checkbox" element --></span>1.gün
+                </label>
+                <input type="checkbox" id="gun2" name="gun2" value="2.gun" class="gun2" />
+                <label for="gun2">
+                    <span><!-- This span is needed to create the "checkbox" element --></span>2.gün
+                </label>
+            </div>
+
+            <div class="checkbox-wrapper-24" style="margin-bottom: 10px;">
+                <input type="checkbox" id="yemek-katilim-evet" name="yemek-katilim-evet" value="Evet"
+                    class="yemekEvet" />
+                <label for="yemek-katilim-evet">
+                    <span><!-- This span is needed to create the "checkbox" element --></span>Social Dinner 'a
+                    katılacağım
+                </label>
+                <input type="checkbox" id="yemek-katilim-hayir" name="yemek-katilim-hayir" value="Hayir"
+                    class="yemekhayır" />
+                <label for="yemek-katilim-hayir">
+                    <span><!-- This span is needed to create the "checkbox" element --></span>Social Dinner 'a
+                    katılmayacağım
+                </label>
+            </div>
+            <label for="">Aşağı Kısmı Social Dinner 'a katılacaksanız doldurunuz!</label>
+            <input placeholder="Diyet tipiniz(vejetaryen, pesketaryen vb.)" id="diyet" type="text" />
+            <input placeholder="Alerjileriniz" id="alerji" type="text" />
+
+            <button type="button" onclick="createData()" id="save_btn">Kayıt Ol</button>
+
+        </form>
     </div>
+
+
+    <span style="text-align: center; margin-top:20px"><a target="_blank" href="https://github.com/Berke-aras"
+            style="color: black; text-decoration:none;">by
+            Berke</a></span>
+
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
     <script src="./kayit.js"></script>
+
+
 </body>
 
 </html>
